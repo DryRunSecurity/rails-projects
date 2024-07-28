@@ -27,13 +27,5 @@ module Mutations
             end
           end
         end
-  
-        private
-  
-        def authorized_find!(id)
-          task = Task.find(id)
-          authorize! :read, task
-          task
-        end
       end
     end
