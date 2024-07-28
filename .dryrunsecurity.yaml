@@ -1,0 +1,15 @@
+sensitiveCodepaths:
+  # Files only allowed authors can modify
+  # - 'app.js'
+  # - 'requirements.txt'
+allowedAuthors:
+  usernames:
+    # GitHub username
+    # - 'jordan-dr'
+notificationList:
+  # GitHub username or team name
+  - '@DryRunSec/security'
+  # - '@john-doe'
+summaryQuestions:
+  - 'Does this PR change the encryption of sensitive data?'
+  - 'Does this PR change handle authorization correcly for a rails graphql application?'
