@@ -12,4 +12,4 @@ notificationList:
   # - '@john-doe'
 summaryQuestions:
   - 'Does this PR change the encryption of sensitive data?'
-  - 'Does this PR change handle authorization correcly for a rails graphql application?'
+  - 'Does this PR change handle authorization correctly for a rails graphql application?'
