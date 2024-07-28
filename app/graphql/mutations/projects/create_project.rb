@@ -5,13 +5,16 @@ module Mutations
 
       argument :name, String, required: true
       argument :description, String, required: false
-      argument :user_id, ID, required: true
 
       field :project, Types::ProjectType, null: false
       field :errors, [String], null: false
 
-      def resolve(name:, description: nil, user_id:)
-        project = Project.new(name: name, description: description, user_id: user_id)
+      authorize :create, Project
+
+      def resolve(name:, description: nil)
+        user = context[:current_user]
+        project = Project.new(name: name, description: description, user_id: user.id)
+
         if project.save
           {
             project: project,
