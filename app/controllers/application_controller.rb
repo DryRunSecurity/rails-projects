@@ -6,7 +6,6 @@ class ApplicationController < ActionController::API
     end
   
     def current_user
-      # Assume some method to fetch the current user, e.g., from a session or token
       User.find(session[:user_id])
     end
   end
