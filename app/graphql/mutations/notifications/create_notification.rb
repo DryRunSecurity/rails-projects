@@ -1,4 +1,5 @@
 module Mutations
+    # adding mutation to create notification
     module Notifications
       class CreateNotification < BaseMutation
         graphql_name 'CreateNotification'
