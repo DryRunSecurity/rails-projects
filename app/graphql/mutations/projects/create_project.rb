@@ -9,8 +9,6 @@ module Mutations
         field :project, Types::ProjectType, null: false
         field :errors, [String], null: false
 
-        # new
-  
         def resolve(name:, description: nil, user_id)
           project = Project.new(name: name, description: description, user_id: user_id)
   
