@@ -1,4 +1,5 @@
 module Mutations
+    # adding mutation to mark notification as read
     module Notifications
       class MarkNotificationAsRead < BaseMutation
         graphql_name 'MarkNotificationAsRead'
