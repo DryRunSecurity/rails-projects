@@ -11,8 +11,6 @@ notificationList:
   - '@DryRunSec/security'
   # - '@john-doe'
 codePolicies:
-  - question: 'Does this PR change the encryption of sensitive data?'
-  - question: 'Does this PR change handle authorization incorrectly for a rails graphql application?'
   - title: "Unrestricted GraphQL Query"
     question: "An "Unrestricted GraphQL Query" refers to a GraphQL query that is not subject to any restrictions or limitations on its complexity, depth, or the amount of data it can retrieve. Does this change allow users to submit unrestricted GraphQL queries?"
 
