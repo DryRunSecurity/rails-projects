@@ -12,5 +12,5 @@ notificationList:
   # - '@john-doe'
 codePolicies:
   - title: "Unrestricted GraphQL Query"
-    question: "An "Unrestricted GraphQL Query" refers to a GraphQL query that is not subject to any restrictions or limitations on its complexity, depth, or the amount of data it can retrieve. Does this change allow users to submit unrestricted GraphQL queries?"
+    question: "An Unrestricted GraphQL Query refers to a GraphQL query that is not subject to any restrictions or limitations on its complexity, depth, or the amount of data it can retrieve. Does this change allow users to submit unrestricted GraphQL queries?"
 
