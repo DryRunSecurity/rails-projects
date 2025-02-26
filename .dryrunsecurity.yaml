@@ -1,15 +1,3 @@
-sensitiveCodepaths:
-  # Files only allowed authors can modify
-  # - 'app.js'
-  # - 'requirements.txt'
-allowedAuthors:
-  usernames:
-    # GitHub username
-    # - 'jordan-dr'
-notificationList:
-  # GitHub username or team name
-  - '@DryRunSec/security'
-  # - '@john-doe'
 codePolicies:
   - title: "API Auth Bypass"
     question: "Does this change bypass authentication on any API endpoints?"
