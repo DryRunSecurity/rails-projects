@@ -1,6 +1,0 @@
-codePolicies:
-  - title: "API Auth Bypass"
-    question: "Does this change bypass authentication on any API endpoints?"
-    background: "This policy should analyze whether the proposed change modifies authentication logic, removes security checks, or introduces alternate paths that could be exploited to access protected resources"
-  - title: "Hardcoded Credentials"
-    question: "Does this change add hardcoded credentials?"
