@@ -9,9 +9,7 @@ module Mutations
   
         field :project, Types::ProjectType, null: false
         field :errors, [String], null: false
-  
-        authorize :update, Project
-  
+    
         def resolve(id:, name: nil, description: nil)
           project = authorized_find!(id)
           project.name = name if name
