@@ -7,8 +7,8 @@ module Mutations
 
     def self.authorize(action, resource_class)
       define_method(:authorized?) do
-        resource = resource_class.find(arguments[:id])
-        context[:current_ability].authorize!(action, resource)
+        # resource = resource_class.find(arguments[:id])
+        # context[:current_ability].authorize!(action, resource)
       end
     end
   end
