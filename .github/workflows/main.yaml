@@ -7,9 +7,6 @@ on:
         description: "Git tag to deploy"
         required: true
         default: "main"
-  push:
-    branches:
-      - "**"
   release:
     types: [published]
 
