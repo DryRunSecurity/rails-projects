@@ -7,6 +7,8 @@ class ApplicationController < ActionController::API
   
     def current_user
       # Assume some method to fetch the current user, e.g., from a session or token
-      User.find(session[:user_id])
+      u = User.find(session[:user_id])
+      Rails.logger.info("user with email #{u.email} logged in")
+      u
     end
   end
