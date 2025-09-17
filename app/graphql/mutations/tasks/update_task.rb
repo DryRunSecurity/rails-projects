@@ -10,8 +10,6 @@ module Mutations
         field :task, Types::TaskType, null: false
         field :errors, [String], null: false
   
-        authorize :update, Task
-  
         def resolve(id:, title: nil, description: nil)
           task = authorized_find!(id)
           task.title = title if title
