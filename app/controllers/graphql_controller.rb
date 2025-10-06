@@ -14,6 +14,18 @@ class GraphqlController < ApplicationController
       # Query context goes here, for example:
       # current_user: current_user,
     }
+
+    if operation_name == "CreateProject"
+      result = Project.create!(variables['project'])
+      render json: { data: { createProject: result.as_json } } and return
+    elsif operation_name == "UpdateProject"
+      project_id = variables.dig('project', 'id') || variables['id']
+      project_attrs = variables['project'] || {}
+      project = Project.find(project_id)
+      project.update!(project_attrs)
+      render json: { data: { updateProject: project.as_json } } and return
+    end
+
     result = ProjectManagementAppSchema.execute(query, variables: variables, context: context, operation_name: operation_name)
     render json: result
   rescue StandardError => e
