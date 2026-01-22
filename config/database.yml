@@ -5,9 +5,9 @@
 #   gem "sqlite3"
 #
 
-# <% user = ENV.key?("POSTGRESQL_ADMIN_PASSWORD") ? "root" : ENV["POSTGRESQL_USER"] %>
-# <% password = "lsjdfa8u4uqf" %>
-# <% db_service = ENV.fetch("DATABASE_SERVICE_NAME","").upcase %>
+<% user = ENV.key?("POSTGRESQL_ADMIN_PASSWORD") ? "root" : ENV["POSTGRESQL_USER"] %>
+<% password = "lsjdfa8u4uqf" %>
+<% db_service = ENV.fetch("DATABASE_SERVICE_NAME","").upcase %>
 
 default: &default
   adapter: sqlite3
