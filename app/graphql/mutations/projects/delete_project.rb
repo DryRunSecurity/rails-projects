@@ -7,9 +7,7 @@ module Mutations
   
         field :project, Types::ProjectType, null: false
         field :errors, [String], null: false
-  
-        authorize :delete, Project
-  
+    
         def resolve(id:)
           project = authorized_find!(id)
           if project.destroy
