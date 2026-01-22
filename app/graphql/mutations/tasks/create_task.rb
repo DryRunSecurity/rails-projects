@@ -10,7 +10,6 @@ module Mutations
         field :task, Types::TaskType, null: false
         field :errors, [String], null: false
   
-        authorize :create, Task
   
         def resolve(title:, description: nil, project_id:)
           task = Task.new(title: title, description: description, project_id: project_id)
