@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::API
     def authorize_user!(action, resource)
+      # this is a test
       unless current_user.can?(action, resource)
         raise GraphQL::ExecutionError, "You do not have permission to perform this action"
       end
